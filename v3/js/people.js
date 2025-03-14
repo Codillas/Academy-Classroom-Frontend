@@ -11,8 +11,8 @@ logoutButton.addEventListener("click", function() {
 });
 
 function logout() {
-    // localStorage.removeItem("JWT");
-    // location.href = "/login.html";
+    localStorage.removeItem("JWT");
+    location.href = "/login.html";
 }
 
 const peopleTableBody = document.querySelector("#peopleTableBody");
