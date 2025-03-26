@@ -9,6 +9,8 @@ const loginForm = document.querySelector("#loginForm");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 
+const alertsContainer = document.querySelector("#alerts");
+
 loginForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -39,9 +41,20 @@ async function login() {
 
         localStorage.setItem("JWT", data.token);
 
-        alert("Login Successful!");
-        location.href = "/pages/people.html";
+        alertsContainer.innerHTML = `
+            <div class="alert alert-success">
+              Login Successful!
+            </div>
+        `;
+
+        setTimeout(function () {
+            location.href = "/pages/people.html"
+        }, 2000);
     } else {
-        alert("Login Failed!");
+        alertsContainer.innerHTML = `
+            <div class="alert alert-danger">
+              Login Failed!
+            </div>
+        `;
     }
 }
