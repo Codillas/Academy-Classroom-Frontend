@@ -10,6 +10,7 @@ const firstNameInput = document.querySelector("#firstName");
 const lastNameInput = document.querySelector("#lastName");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
+const roleInput = document.querySelector("#role");
 
 signUpForm.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -23,6 +24,9 @@ async function signUp() {
     const lastName = lastNameInput.value;
     const email = emailInput.value;
     const password = passwordInput.value;
+    const role = roleInput.value;
+
+    console.log("ROLE -> ", role);
 
     const signUpRequestBody = {
         first_name: firstName,
