@@ -1,7 +1,7 @@
 const token = localStorage.getItem("JWT");
 
 if (token != null) {
-    location.href = "/people.html";
+    location.href = "/pages/people.html";
 }
 
 const loginForm = document.querySelector("#loginForm");
@@ -40,7 +40,7 @@ async function login() {
         localStorage.setItem("JWT", data.token);
 
         alert("Login Successful!");
-        location.href = "/people.html";
+        location.href = "/pages/people.html";
     } else {
         alert("Login Failed!");
     }

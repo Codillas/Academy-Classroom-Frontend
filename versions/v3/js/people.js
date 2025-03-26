@@ -18,7 +18,7 @@ function logout() {
 const peopleTableBody = document.querySelector("#peopleTableBody");
 
 async function getPeople() {
-    const response = await fetch("http://localhost:8080/persons", {
+    const response = await fetch("https://academy-classroom-backend-0xay.onrender.com/persons", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

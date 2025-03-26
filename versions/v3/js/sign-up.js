@@ -31,7 +31,7 @@ async function signUp() {
         password: password,
     };
 
-    const response = await fetch("http://localhost:8080/sign-up", {
+    const response = await fetch("https://academy-classroom-backend-0xay.onrender.com/sign-up", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

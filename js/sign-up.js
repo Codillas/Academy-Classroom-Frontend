@@ -1,7 +1,7 @@
 const token = localStorage.getItem("JWT");
 
 if (token != null) {
-    location.href = "/people.html";
+    location.href = "/pages/people.html";
 }
 
 const signUpForm = document.querySelector("#signUpForm");
@@ -41,7 +41,7 @@ async function signUp() {
 
     if (response.ok) {
         alert("Sign Up Successfully!");
-        location.href = "/login.html";
+        location.href = "/pages/login.html";
     } else {
         alert("Sign Up Failed!");
     }
